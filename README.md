@@ -1,12 +1,26 @@
-## Capstone Progress: User Story 1
-**Objective:** Establish the primary scene architecture and UI foundation.
+# Unity 2D Capstone Project
+**Developer:** Andy Liang  
+**Tech Stack:** Unity 2021.3, C#, Git
 
-### Technical Implementation
-* **Scene Architecture:** Created `Title`, `Gameplay`, and `Ending` scenes and added them to Build Settings.
-* **UI Configuration:** Implemented a Canvas in each scene with "Scale With Screen Size" enabled for resolution independence.
-* **Navigation:** Integrated the `SceneLoader` prefab to handle transitions and "Quit" functionality.
+## 🚀 Project Overview
+This project is a 2D adventure game developed as a Capstone project. It focuses on modular game design, physics-based character controllers, and robust scene management.
 
-### Concepts Applied
-* `UnityEngine.SceneManagement`
-* UI Event Handling (UnityEvents)
-* Prefab Workflows
+---
+
+## 🛠 Completed User Stories
+
+### **User Story 1: Scene Architecture & Navigation**
+* **Core Loop:** Created a functional game flow: `Title` -> `Gameplay` -> `Ending`.
+* **SceneLoader System:** Integrated a C# SceneLoader to manage transitions and build indices.
+* **UI Foundation:** Designed a responsive Canvas scaled for multiple resolutions, including functional **Play** and **Quit** buttons.
+
+### **User Story 2: Player Character & Physics**
+* **Player Prefab:** Developed a "Master Template" Player object to ensure consistency across all game levels.
+* **Physics Integration:** Implemented **Rigidbody 2D** and **Box Collider 2D** for environmental interaction.
+* **Movement Logic:** Created a `PlayerController.cs` script using `Input.GetAxisRaw` for snappy, multi-axis movement.
+* **Bug Resolution:** * Fixed **Physics Depenetration:** Resolved an issue where the Player was "ejected" from the Floor at start-up by separating collider bounds.
+    * Optimized **Linear Drag & Constraints:** Adjusted Rigidbody settings to prevent drifting and unwanted Z-axis rotation.
+
+---
+
+## 🕹 How
