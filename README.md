@@ -23,4 +23,15 @@ This project is a 2D adventure game developed as a Capstone project. It focuses 
 
 ---
 
-## 🕹 How
+## 🕹 How to Run
+1. Open the project in **Unity 2021.3**.
+2. Load the **Title** scene from the `Scenes` folder.
+3. Press **Play**.
+4. Use **WASD** or **Arrow Keys** to control the Player square.
+
+---
+
+## 📂 Project Structure
+* `/Assets/Scripts`: All C# logic including Player and Menu controls.
+* `/Assets/Prefabs`: Modular game objects (Player, Floor).
+* `/Assets/Scenes`: The three core game states.
