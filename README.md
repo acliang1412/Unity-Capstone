@@ -32,7 +32,7 @@ This project is a 2D adventure game developed as a Capstone project. It focuses 
 1. Open the project in **Unity 2021.3**.
 2. Load the **Title** scene from the `Scenes` folder.
 3. Press **Play**.
-4. Use **WASD** or **Arrow Keys** to control the Player square.
+4. 4. Use **WASD** or **Arrow Keys** to navigate the spaceship through the debris field.
 
 ---
 
