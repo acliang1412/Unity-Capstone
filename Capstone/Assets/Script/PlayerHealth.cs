@@ -1,19 +1,18 @@
 using UnityEngine;
-using UnityEngine.UI; // IMPORTANT: This allows the script to talk to the Slider
+using UnityEngine.UI;
+using UnityEngine.SceneManagement; // <-- ADD THIS
 
 public class PlayerHealth : MonoBehaviour
 {
     public int maxHealth = 10;
     public int currentHealth;
 
-    public Slider healthSlider; // Drag your HealthBar Slider here!
+    public Slider healthSlider;
     public GameObject gameOverUI;
 
     void Start()
     {
         currentHealth = maxHealth;
-
-        // Initialize the slider values
         if (healthSlider != null)
         {
             healthSlider.maxValue = maxHealth;
@@ -33,7 +32,6 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth -= damage;
 
-        // Update the visual health bar
         if (healthSlider != null)
         {
             healthSlider.value = currentHealth;
@@ -41,8 +39,12 @@ public class PlayerHealth : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            gameOverUI.SetActive(true);
-            Time.timeScale = 0;
+            // 1. Save the score so the Ending scene can display it
+            PlayerPrefs.SetInt("FinalScore", ScoreManager.score);
+
+            // 2. Load the Ending scene
+            SceneManager.LoadScene("Ending");
+
         }
     }
 }

@@ -42,6 +42,16 @@ This project is a 2D adventure game developed as a Capstone project. It focuses 
 
 ---
 
+### **User Story 5: Final Gameplay Model & Game Loop**
+* **Completed Game Loop:** Successfully integrated the full flow: `Title` -> `Gameplay` -> `Ending`.
+* **Win/Loss Conditions:** * **Win:** Implemented a 60-second survival timer via `LevelManager.cs`.
+    * **Loss:** Triggered when `PlayerHealth.cs` reaches zero.
+* **Persistent Score System:** Used `PlayerPrefs` to store the session score in the Gameplay scene and retrieve it for display in the Ending scene.
+* **Scene Management:** Developed a `MenuControls.cs` script to handle the "Play Again" and "Quit" logic, ensuring `Time.timeScale` is reset for repeated play sessions.
+* **UI Integration:** Linked TextMeshPro components to dynamic scripts to provide real-time fuel/timer feedback and final performance summaries.
+
+---
+
 ## 🕹 How to Run
 1. Open the project in **Unity 2021.3**.
 2. Load the **Title** scene from the `Assets/Scenes` folder.
